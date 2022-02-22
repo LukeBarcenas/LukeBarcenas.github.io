@@ -1,0 +1,209 @@
+body {
+  background: repeating-linear-gradient(180deg,#200122,black);
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Comic Neue', sans-serif;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  color: whitesmoke;
+  margin: 0 0 20px 0;
+  padding-top: 5px;
+}
+
+.Name:hover {
+  text-shadow: -2px -2px #696969;
+}
+
+.content {
+  display: block;
+  margin: auto;
+}
+
+.Name {
+  font-size:65px;
+}
+
+.container {
+  height: 180px;
+  background: linear-gradient(180deg,#6f0000,#200122);
+  border-bottom: solid 3px whitesmoke;
+  font-size: 20px;
+  padding-top: 15px;
+  margin-top: 25px;
+  max-width: 100% auto;
+}
+
+a {
+    text-decoration: none;
+    color: #181818;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.links {
+  display: inline;
+  margin: 0 50px 0 10px;
+}
+
+.top {
+  position: fixed;
+  color: #212121;
+  height: 25px;
+  font-size: 15px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+#mail {
+  max-width: 24px;
+  height: 16px;
+}
+
+a.bottom {
+  color: orangered;
+}
+
+
+.bottom {
+  text-align: right;
+  margin-right: 10px;
+  font-size: 21px;
+}
+
+p {
+  font-size: 24px;
+}
+
+p:hover {
+  letter-spacing: 1px;
+  text-decoration: underline 1px solid;
+}
+
+#Me {
+  border: 10px solid;
+  border-radius: 4px;
+}
+
+#Me:hover {
+  animation-name: colors;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colors {
+  0% {
+    border-color: #f0170f;
+  }
+  20% {
+    border-color: #e8b117;
+  }
+  40% {
+    border-color: #5adf20;
+  }
+  60% {
+    border-color: #36bfc9;
+  }
+  80% {
+    border-color: #9532cd;
+  }
+  100% {
+    border-color: #f0170f;
+  }
+}
+
+#spinner {
+  margin: 0 auto;
+  width: 170px;
+}
+
+#spinner:hover {
+  left: 0px;
+  position: relative;
+  animation-name: move;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(40deg);
+  }
+  20% {
+    transform: rotate(80deg)
+  }
+  30% {
+    transform: rotate(120deg);
+  }
+  40% {
+    transform: rotate(160deg);
+  }
+  50% {
+    transform: rotate(200deg);
+  }
+  60% {
+    transform: rotate(240deg);
+  }
+  70% {
+    transform: rotate(270deg);
+  }
+  80% {
+    transform: rotate(310deg);
+  }
+  90% {
+    transform: rotate(340deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 715px) {
+  .top {
+    font-size: 12px;
+    height: 20px;
+  }
+
+  .links {
+    margin-right: 15px;
+  }
+
+  .content {
+    width: 420px;
+  }
+  #Resume, #LOR, #Essay {
+    height: 550px;
+  }
+}
+
+@media (max-width: 477px) {
+  .Name {
+    font-size: 50px;
+  }
+  .content {
+    width: 70%;
+  }
+  .links {
+    margin-right: 7px;
+  }
+  #Resume, #LOR, #Essay {
+    height: 465px;
+  }
+}
+
+
+
+
+
+
+
+
