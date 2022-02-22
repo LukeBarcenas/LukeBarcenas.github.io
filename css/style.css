@@ -27,13 +27,13 @@ h1 {
 }
 
 .container {
-  height: 180px;
+  height: auto;
   background: linear-gradient(180deg,#6f0000,#200122);
   border-bottom: solid 3px whitesmoke;
   font-size: 20px;
   padding-top: 15px;
   margin-top: 25px;
-  max-width: 100% auto;
+  width: 100% auto;
 }
 
 a {
@@ -186,20 +186,32 @@ p:hover {
 }
 
 @media (max-width: 477px) {
+  .container {
+    margin: auto;
+  }
   .Name {
     font-size: 50px;
   }
   .content {
-    width: 70%;
+    width: 90%;
   }
-  .links {
-    margin-right: 7px;
+  .top {
+    display: none;
   }
   #Resume, #LOR, #Essay {
     height: 465px;
+  
   }
 }
 
+@media (max-width: 450px) {
+  .Name {
+    font-size: 40px;
+  }
+  #description {
+    font-size: 20px;
+  }
+}
 
 
 
