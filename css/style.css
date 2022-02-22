@@ -13,6 +13,10 @@ h1 {
   padding-top: 5px;
 }
 
+hr {
+  display: none;
+}
+
 .Name:hover {
   text-shadow: -2px -2px #696969;
 }
@@ -205,12 +209,12 @@ p:hover {
 }
 
 @media (max-width: 450px) {
-  .Name {
-    font-size: 40px;
-    text-decoration: underline solid whitesmoke;
-  }
   #description {
     font-size: 18px;
+  }
+  hr {
+    display: block;
+    color: whitesmoke;
   }
 }
 
