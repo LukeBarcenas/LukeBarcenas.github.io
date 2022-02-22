@@ -207,9 +207,10 @@ p:hover {
 @media (max-width: 450px) {
   .Name {
     font-size: 40px;
+    text-decoration: underline solid whitesmoke;
   }
   #description {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
