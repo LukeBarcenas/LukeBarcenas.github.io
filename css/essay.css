@@ -8,21 +8,12 @@ body {
 
 .container {
   height: auto;
-  background: #b31217;
+  background: #004e92;
   border-bottom: solid 3px whitesmoke;
   font-size: 20px;
   padding-top: 15px;
   margin-top: 25px;
   width: 100% auto;
-}
-
-.aBlock {
-  margin: auto;
-}
-
-#description {
-  font-size: 20px;
-  margin: 15px 10px 10px 10px;
 }
 
 h1 {
@@ -43,92 +34,6 @@ h1 {
   top: 0px;
   width: 100%;
   background-color: whitesmoke;
-}
-
-/* Fullscreen: 4x1 layout */
-.boxHolder {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
-  gap: 20px; /* Space between boxes */
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Box styling */
-.box {
-  color: whitesmoke;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.box a:visited {
-  color: rgb(255, 255, 255);
-
-}
-
-/* Hover effect with upward movement */
-.box:hover {
-  transform: translateY(-5px);
-}
-
-#resumeBox {
-  background-color: #fa5c00;
-}
-
-#resumeBox:hover {
-  background-color: #dd5100;
-}
-
-#certsBox {
-  background-color: #edd500;
-}
-
-#certsBox:hover {
-  background-color: #cfba00;
-}
-
-#SEBox {
-  background-color: #144fbd;
-}
-
-#SEBox:hover {
-  background-color: #0f3e95;
-}
-
-#aboutBox {
-  background-color: #8714bd;
-}
-
-#aboutBox:hover {
-  background-color: #5b0b81;
-}
-
-.gitBlock, .mailBlock, .callBlock {
-  background: lightgray;
-  text-align: center;
-  margin: 2px auto;
-  height: 106px;
-  width: 120px;
-  padding: auto;
-  line-height: 53px;
-  border-radius: 8px;
-}
-
-.icon {
-  width: 103px;
-  height: auto;
-  margin-top: 1px;
-}
-
-.gitBlock:hover, .mailBlock:hover, .callBlock:hover {
-  animation: blockMove 500ms forwards;
 }
 
 @keyframes blockMove {
@@ -155,30 +60,32 @@ hr {
   text-shadow: -2px -2px #696969;
 }
 
+.content {
+  display: block;
+  margin: auto;
+}
+
 .Name {
   font-size: 65px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: #181818;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.links {
-  display: inline;
-  margin: auto;
-  padding-bottom: 5px;
-}
-
 .links a:active {
   color: rgb(21, 21, 21);
 }
 
-.links a:visited {
-  color: rgb(21, 21, 21);
+.links {
+  display: inline;
+  margin: auto;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 969px) {
@@ -202,10 +109,6 @@ a:hover {
   #Resume, #LOR, #Essay {
     height: 550px;
   }
-
-  .boxHolder {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-  }
 }
 
 @media (max-width: 475px) {
@@ -225,12 +128,28 @@ a:hover {
     height: 365px;
   
   }
-  .boxHolder {
-    grid-template-columns: 1fr; /* Single column */
-  }
-
 }
 
+.gitBlock, .mailBlock, .callBlock {
+  background: lightgray;
+  text-align: center;
+  margin: 2px auto;
+  height: 106px;
+  width: 120px;
+  padding: auto;
+  line-height: 53px;
+  border-radius: 8px;
+}
+
+.icon {
+  width: 103px;
+  height: auto;
+  margin-top: 1px;
+}
+
+.gitBlock:hover, .mailBlock:hover, .callBlock:hover {
+  animation: blockMove 500ms forwards;
+}
 
 @media (max-width: 450px) {
   .links {

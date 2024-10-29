@@ -8,21 +8,12 @@ body {
 
 .container {
   height: auto;
-  background: #b31217;
+  background: #E44D26;
   border-bottom: solid 3px whitesmoke;
   font-size: 20px;
   padding-top: 15px;
   margin-top: 25px;
   width: 100% auto;
-}
-
-.aBlock {
-  margin: auto;
-}
-
-#description {
-  font-size: 20px;
-  margin: 15px 10px 10px 10px;
 }
 
 h1 {
@@ -45,69 +36,57 @@ h1 {
   background-color: whitesmoke;
 }
 
-/* Fullscreen: 4x1 layout */
-.boxHolder {
+@keyframes blockMove {
+  100% {
+    transform: translate(0px, -3px);
+  }
+}
+
+.blocks {
+  margin: auto;
+  width: 80%;
+  height: 110px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
-  gap: 20px; /* Space between boxes */
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  grid-gap: 8px 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-/* Box styling */
-.box {
+hr {
   color: whitesmoke;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.3s;
 }
 
-.box a:visited {
-  color: rgb(255, 255, 255);
-
+.Name:hover {
+  text-shadow: -2px -2px #696969;
 }
 
-/* Hover effect with upward movement */
-.box:hover {
-  transform: translateY(-5px);
+.content {
+  display: block;
+  margin: auto;
+  height: 775px;
 }
 
-#resumeBox {
-  background-color: #fa5c00;
+.Name {
+  font-size: 65px;
 }
 
-#resumeBox:hover {
-  background-color: #dd5100;
+a {
+    text-decoration: none;
+    color: #181818;
 }
 
-#certsBox {
-  background-color: #edd500;
+a:hover {
+  text-decoration: underline;
 }
 
-#certsBox:hover {
-  background-color: #cfba00;
+.links {
+  display: inline;
+  margin: auto;
+  padding-bottom: 5px;
 }
 
-#SEBox {
-  background-color: #144fbd;
-}
-
-#SEBox:hover {
-  background-color: #0f3e95;
-}
-
-#aboutBox {
-  background-color: #8714bd;
-}
-
-#aboutBox:hover {
-  background-color: #5b0b81;
+.links a:active {
+  color: rgb(21, 21, 21);
 }
 
 .gitBlock, .mailBlock, .callBlock {
@@ -131,61 +110,12 @@ h1 {
   animation: blockMove 500ms forwards;
 }
 
-@keyframes blockMove {
-  100% {
-    transform: translate(0px, -3px);
-  }
-}
-
-.blocks {
-  margin: auto;
-  width: 80%;
-  height: 160px;
-  display: grid;
-  grid-gap: 8px 8px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-hr {
-  color: whitesmoke;
-}
-
-.Name:hover {
-  text-shadow: -2px -2px #696969;
-}
-
-.Name {
-  font-size: 65px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.links {
-  display: inline;
-  margin: auto;
-  padding-bottom: 5px;
-}
-
-.links a:active {
-  color: rgb(21, 21, 21);
-}
-
-.links a:visited {
-  color: rgb(21, 21, 21);
-}
-
 @media (max-width: 969px) {
   .links {
     font-size: 16px;
   }
 }
+
 
 @media (max-width: 625px) {
   .top {
@@ -198,13 +128,7 @@ a:hover {
 
   .content {
     width: 420px;
-  }
-  #Resume, #LOR, #Essay {
     height: 550px;
-  }
-
-  .boxHolder {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
   }
 }
 
@@ -225,12 +149,7 @@ a:hover {
     height: 365px;
   
   }
-  .boxHolder {
-    grid-template-columns: 1fr; /* Single column */
-  }
-
 }
-
 
 @media (max-width: 450px) {
   .links {
@@ -246,6 +165,12 @@ a:hover {
   padding: auto;
   line-height: 53px;
   border-radius: 8px;
+}
+
+@media (max-width: 425px) {
+  .content {
+    height: 450px;
+  }
 }
 
 .icon {

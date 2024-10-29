@@ -8,7 +8,7 @@ body {
 
 .container {
   height: auto;
-  background: #b31217;
+  background: #8714bd;
   border-bottom: solid 3px whitesmoke;
   font-size: 20px;
   padding-top: 15px;
@@ -16,20 +16,18 @@ body {
   width: 100% auto;
 }
 
-.aBlock {
-  margin: auto;
-}
-
-#description {
-  font-size: 20px;
-  margin: 15px 10px 10px 10px;
-}
-
 h1 {
   font-size: 50px;
   color: whitesmoke;
   margin: 0 0 20px 0;
   padding-top: 5px;
+}
+
+h3 {
+  margin: 0px 15px 10px 15px;
+  padding: 20px;
+  text-align: justify;
+  font-size: 16px;
 }
 
 .top {
@@ -45,69 +43,147 @@ h1 {
   background-color: whitesmoke;
 }
 
-/* Fullscreen: 4x1 layout */
-.boxHolder {
+@keyframes blockMove {
+  100% {
+    transform: translate(0px, -3px);
+  }
+}
+
+.blocks {
+  margin: auto;
+  width: 80%;
+  height: 160px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
-  gap: 20px; /* Space between boxes */
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+  grid-gap: 8px 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
-/* Box styling */
-.box {
+#topHR {
+  display: none;
+}
+
+hr {
   color: whitesmoke;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.3s;
 }
 
-.box a:visited {
-  color: rgb(255, 255, 255);
-
+.Name:hover {
+  text-shadow: -2px -2px #696969;
 }
 
-/* Hover effect with upward movement */
-.box:hover {
-  transform: translateY(-5px);
+.content {
+  display: block;
+  margin: auto;
+  width: 60%;
 }
 
-#resumeBox {
-  background-color: #fa5c00;
+.Name {
+  font-size: 65px;
 }
 
-#resumeBox:hover {
-  background-color: #dd5100;
+a {
+    text-decoration: none;
+    color: #181818;
 }
 
-#certsBox {
-  background-color: #edd500;
+a:hover {
+  text-decoration: underline;
 }
 
-#certsBox:hover {
-  background-color: #cfba00;
+.links {
+  display: inline;
+  margin: auto;
+  padding-bottom: 5px;
 }
 
-#SEBox {
-  background-color: #144fbd;
+
+.links a:active {
+  color: rgb(21, 21, 21);
 }
 
-#SEBox:hover {
-  background-color: #0f3e95;
+.links a:active {
+  color: rgb(21, 21, 21);
 }
 
-#aboutBox {
-  background-color: #8714bd;
+#Me {
+  border: 4px solid;
+  border-radius: 4px;
+  width: 25%;
+  height: auto;
+  margin: auto;
 }
 
-#aboutBox:hover {
-  background-color: #5b0b81;
+#Me:hover {
+  animation-name: colors;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colors {
+  0% {
+    border-color: #f0170f;
+  }
+  20% {
+    border-color: #e8b117;
+  }
+  40% {
+    border-color: #5adf20;
+  }
+  60% {
+    border-color: #36bfc9;
+  }
+  80% {
+    border-color: #9532cd;
+  }
+  100% {
+    border-color: #f0170f;
+  }
+}
+
+@media (max-width: 969px) {
+  .links {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 920px) {
+  h3 {
+    font-size: 20px;
+  }
+  #Me {
+    width: 25%;
+  }
+}
+
+@media (max-width: 625px) {
+  .top {
+    height: 20px;
+  }
+
+  .links {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 550px) {
+  h3 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    margin-bottom: auto;
+  }
+  .Name {
+    font-size: 50px;
+  }
+  .content {
+    width: 60%;
+  }
+  .links {
+    font-size: 10px;
+  }
 }
 
 .gitBlock, .mailBlock, .callBlock {
@@ -131,107 +207,6 @@ h1 {
   animation: blockMove 500ms forwards;
 }
 
-@keyframes blockMove {
-  100% {
-    transform: translate(0px, -3px);
-  }
-}
-
-.blocks {
-  margin: auto;
-  width: 80%;
-  height: 160px;
-  display: grid;
-  grid-gap: 8px 8px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-hr {
-  color: whitesmoke;
-}
-
-.Name:hover {
-  text-shadow: -2px -2px #696969;
-}
-
-.Name {
-  font-size: 65px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.links {
-  display: inline;
-  margin: auto;
-  padding-bottom: 5px;
-}
-
-.links a:active {
-  color: rgb(21, 21, 21);
-}
-
-.links a:visited {
-  color: rgb(21, 21, 21);
-}
-
-@media (max-width: 969px) {
-  .links {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 625px) {
-  .top {
-    height: 20px;
-  }
-
-  .links {
-    font-size: 12px;
-  }
-
-  .content {
-    width: 420px;
-  }
-  #Resume, #LOR, #Essay {
-    height: 550px;
-  }
-
-  .boxHolder {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
-  }
-}
-
-@media (max-width: 475px) {
-  .container {
-    margin-bottom: auto;
-  }
-  .Name {
-    font-size: 50px;
-  }
-  .content {
-    width: 90%;
-  }
-  .links {
-    font-size: 10px;
-  }
-  #Resume, #LOR, #Essay {
-    height: 365px;
-  
-  }
-  .boxHolder {
-    grid-template-columns: 1fr; /* Single column */
-  }
-
-}
-
-
 @media (max-width: 450px) {
   .links {
     font-size: 10px;
@@ -247,6 +222,10 @@ a:hover {
   line-height: 53px;
   border-radius: 8px;
 }
+
+ h3 {
+    font-size: 10px;
+  }
 
 .icon {
   width: 50px;
