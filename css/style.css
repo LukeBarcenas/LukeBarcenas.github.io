@@ -1,9 +1,28 @@
 body {
-  background: repeating-linear-gradient(180deg,#200122,black);
+  background: #191919;
   color: whitesmoke;
   text-align: center;
   font-family: 'Comic Neue', sans-serif;
   margin: auto;
+}
+
+.container {
+  height: auto;
+  background: #b31217;
+  border-bottom: solid 3px whitesmoke;
+  font-size: 20px;
+  padding-top: 15px;
+  margin-top: 25px;
+  width: 100% auto;
+}
+
+.aBlock {
+  margin: auto;
+}
+
+#description {
+  font-size: 20px;
+  margin: 15px 10px 10px 10px;
 }
 
 h1 {
@@ -13,32 +32,135 @@ h1 {
   padding-top: 5px;
 }
 
+.top {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  color: #212121;
+  height: auto;
+  font-size: 20px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+/* Fullscreen: 4x1 layout */
+.boxHolder {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
+  gap: 20px; /* Space between boxes */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Box styling */
+.box {
+  color: whitesmoke;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.box a:visited {
+  color: rgb(255, 255, 255);
+
+}
+
+/* Hover effect with upward movement */
+.box:hover {
+  transform: translateY(-5px);
+}
+
+#resumeBox {
+  background-color: #fa5c00;
+}
+
+#resumeBox:hover {
+  background-color: #dd5100;
+}
+
+#certsBox {
+  background-color: #edd500;
+}
+
+#certsBox:hover {
+  background-color: #cfba00;
+}
+
+#SEBox {
+  background-color: #144fbd;
+}
+
+#SEBox:hover {
+  background-color: #0f3e95;
+}
+
+#aboutBox {
+  background-color: #8714bd;
+}
+
+#aboutBox:hover {
+  background-color: #5b0b81;
+}
+
+.gitBlock, .mailBlock, .callBlock {
+  background: lightgray;
+  text-align: center;
+  margin: 2px auto;
+  height: 106px;
+  width: 120px;
+  padding: auto;
+  line-height: 53px;
+  border-radius: 8px;
+}
+
+.icon {
+  width: 103px;
+  height: auto;
+  margin-top: 1px;
+}
+
+.gitBlock:hover, .mailBlock:hover, .callBlock:hover {
+  animation: blockMove 500ms forwards;
+}
+
+@keyframes blockMove {
+  100% {
+    transform: translate(0px, -3px);
+  }
+}
+
+.blocks {
+  margin: auto;
+  width: 80%;
+  height: 160px;
+  display: grid;
+  grid-gap: 8px 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+hr {
+  color: whitesmoke;
+}
+
 .Name:hover {
   text-shadow: -2px -2px #696969;
 }
 
-.content {
-  display: block;
-  margin: auto;
-}
-
 .Name {
-  font-size:65px;
-}
-
-.container {
-  height: 180px;
-  background: linear-gradient(180deg,#6f0000,#200122);
-  border-bottom: solid 3px whitesmoke;
-  font-size: 20px;
-  padding-top: 15px;
-  margin-top: 25px;
-  max-width: 100% auto;
+  font-size: 65px;
 }
 
 a {
     text-decoration: none;
-    color: #181818;
 }
 
 a:hover {
@@ -47,134 +169,27 @@ a:hover {
 
 .links {
   display: inline;
-  margin: 0 50px 0 10px;
+  margin: auto;
+  padding-bottom: 5px;
 }
 
-.top {
-  position: fixed;
-  color: #212121;
-  height: 25px;
-  font-size: 15px;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  background-color: whitesmoke;
+.links a:visited {
+  color: rgb(21, 21, 21);
 }
 
-#mail {
-  max-width: 24px;
-  height: 16px;
-}
-
-a.bottom {
-  color: orangered;
-}
-
-
-.bottom {
-  text-align: right;
-  margin-right: 10px;
-  font-size: 21px;
-}
-
-p {
-  font-size: 24px;
-}
-
-p:hover {
-  letter-spacing: 1px;
-  text-decoration: underline 1px solid;
-}
-
-#Me {
-  border: 10px solid;
-  border-radius: 4px;
-}
-
-#Me:hover {
-  animation-name: colors;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes colors {
-  0% {
-    border-color: #f0170f;
-  }
-  20% {
-    border-color: #e8b117;
-  }
-  40% {
-    border-color: #5adf20;
-  }
-  60% {
-    border-color: #36bfc9;
-  }
-  80% {
-    border-color: #9532cd;
-  }
-  100% {
-    border-color: #f0170f;
+@media (max-width: 969px) {
+  .links {
+    font-size: 16px;
   }
 }
 
-#spinner {
-  margin: 0 auto;
-  width: 170px;
-}
-
-#spinner:hover {
-  left: 0px;
-  position: relative;
-  animation-name: move;
-  animation-duration: 500ms;
-  animation-iteration-count: infinite;
-}
-
-@keyframes move {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(40deg);
-  }
-  20% {
-    transform: rotate(80deg)
-  }
-  30% {
-    transform: rotate(120deg);
-  }
-  40% {
-    transform: rotate(160deg);
-  }
-  50% {
-    transform: rotate(200deg);
-  }
-  60% {
-    transform: rotate(240deg);
-  }
-  70% {
-    transform: rotate(270deg);
-  }
-  80% {
-    transform: rotate(310deg);
-  }
-  90% {
-    transform: rotate(340deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 715px) {
+@media (max-width: 625px) {
   .top {
-    font-size: 12px;
     height: 20px;
   }
 
   .links {
-    margin-right: 15px;
+    font-size: 12px;
   }
 
   .content {
@@ -183,27 +198,61 @@ p:hover {
   #Resume, #LOR, #Essay {
     height: 550px;
   }
+
+  .boxHolder {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+  }
 }
 
-@media (max-width: 477px) {
+@media (max-width: 475px) {
+  .container {
+    margin-bottom: auto;
+  }
   .Name {
     font-size: 50px;
   }
   .content {
-    width: 70%;
+    width: 90%;
   }
   .links {
-    margin-right: 7px;
+    font-size: 10px;
   }
   #Resume, #LOR, #Essay {
-    height: 465px;
+    height: 365px;
+  
   }
+  .boxHolder {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
 }
 
 
+@media (max-width: 450px) {
+  .links {
+    font-size: 10px;
+  }
+  
+  .gitBlock, .mailBlock, .callBlock {
+  background: lightgray;
+  text-align: center;
+  margin: 2px auto;
+  height: 53px;
+  width: 60px;
+  padding: auto;
+  line-height: 53px;
+  border-radius: 8px;
+}
 
+.icon {
+  width: 50px;
+  height: auto;
+  margin-top: 1px;
+}
+}
 
-
-
-
-
+@media (max-width: 340px) {
+  .links {
+    font-size: 8px;
+  }
+}
